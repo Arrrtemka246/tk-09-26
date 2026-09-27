@@ -102,7 +102,8 @@ def main():
             for d in docs:
                 for i in name_indices(d["lines"],a["name"]):
                     if infer(d["lines"],i,events)!=x["event"]:continue
-                    row=d["lines"][i]\n                    if not TIME.search(row) and i+1<len(d["lines"]): row+=" "+d["lines"][i+1]
+                    row=d["lines"][i]
+                    if not TIME.search(row) and i+1<len(d["lines"]): row+=" "+d["lines"][i+1]
                     times=TIME.findall(row);kind=d["kind"]
                     if kind=="unknown":kind="result" if any(rx.search(row) for rx in STAT.values()) else "start"
                     if kind=="start":
