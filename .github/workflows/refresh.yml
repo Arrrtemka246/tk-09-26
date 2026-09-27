@@ -1,0 +1,38 @@
+name: Refresh Team Kulik results
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: team-kulik-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: pip install requests==2.32.5 beautifulsoup4==4.14.2 pypdf==6.1.1
+      - name: Read official meet PDFs
+        run: python scripts/update_results.py
+      - name: Save fresh results
+        run: |
+          if git diff --quiet -- data/results.json; then
+            echo "No result changes"
+            exit 0
+          fi
+          git config user.name "team-kulik-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/results.json
+          git commit -m "Update Team Kulik results [skip ci]"
+          git push
