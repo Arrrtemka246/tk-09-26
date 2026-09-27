@@ -72,7 +72,7 @@ def fetch_docs():
         try:
             rr=s.get(u,timeout=30);rr.raise_for_status()
             reader=PdfReader(io.BytesIO(rr.content))
-            text="\n".join((p.extract_text() or "") for p in reader.pages)
+            text="\\n".join(((p.extract_text(extraction_mode="layout") or "") if hasattr(p,"extract_text") else "") for p in reader.pages)
             if text.strip():
                 lines=[x.strip() for x in text.splitlines() if x.strip()]
                 docs.append({"url":u,"label":label,"text":text,"lines":lines,"kind":pdf_kind(u,label,text)})
@@ -102,7 +102,7 @@ def main():
             for d in docs:
                 for i in name_indices(d["lines"],a["name"]):
                     if infer(d["lines"],i,events)!=x["event"]:continue
-                    row=" ".join(d["lines"][max(0,i-1):min(len(d["lines"]),i+4)])
+                    row=d["lines"][i]\n                    if not TIME.search(row) and i+1<len(d["lines"]): row+=" "+d["lines"][i+1]
                     times=TIME.findall(row);kind=d["kind"]
                     if kind=="unknown":kind="result" if any(rx.search(row) for rx in STAT.values()) else "start"
                     if kind=="start":
