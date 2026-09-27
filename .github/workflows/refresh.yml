@@ -25,15 +25,6 @@ jobs:
         run: pip install requests==2.32.5 beautifulsoup4==4.14.2 pypdf==6.1.1
       - name: Read official meet PDFs
         run: python scripts/update_results.py
-      - name: Debug ResultList 2
-        run: |
-          python - <<'PY'
-          import io, requests
-          from pypdf import PdfReader
-          u='https://funtiak.serv00.net/YM/ResultList_2.pdf'
-          b=requests.get(u,timeout=30).content
-          print('\n'.join((p.extract_text() or '') for p in PdfReader(io.BytesIO(b)).pages))
-          PY
       - name: Save fresh results
         run: |
           if git diff --quiet -- data/results.json; then
