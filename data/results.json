@@ -14,7 +14,7 @@
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points"
   },
-  "lastUpdated": "2026-09-28T07:22:53+00:00",
+  "lastUpdated": "2026-09-28T07:28:09+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -1201,14 +1201,14 @@
           "event": "50 м баттерфляй",
           "heat": 2,
           "lane": 4,
-          "seed": null,
-          "result": null,
-          "status": "not_listed",
-          "place": null,
-          "aqua": null,
-          "delta": null,
+          "seed": "27.00",
+          "result": "27.24",
+          "status": "finished",
+          "place": 3,
+          "aqua": 546,
+          "delta": 0.24,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_6.pdf",
-          "startSource": null,
+          "startSource": "https://funtiak.serv00.net/YM/StartList_6.pdf",
           "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         },
         {
@@ -1217,14 +1217,14 @@
           "event": "800 м в/с",
           "heat": 1,
           "lane": 3,
-          "seed": null,
-          "result": null,
-          "status": "not_listed",
-          "place": null,
-          "aqua": null,
-          "delta": null,
+          "seed": "8:45.99",
+          "result": "8:53.12",
+          "status": "finished",
+          "place": 2,
+          "aqua": 609,
+          "delta": 7.13,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_10.pdf",
-          "startSource": null,
+          "startSource": "https://funtiak.serv00.net/YM/StartList_10.pdf",
           "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         },
         {
@@ -1233,14 +1233,14 @@
           "event": "1500 м в/с",
           "heat": 1,
           "lane": 6,
-          "seed": null,
+          "seed": "16:47.93",
           "result": null,
           "status": "scheduled",
           "place": null,
           "aqua": null,
           "delta": null,
           "resultSource": null,
-          "startSource": null,
+          "startSource": "https://funtiak.serv00.net/YM/StartList_20.pdf",
           "note": null
         }
       ]
