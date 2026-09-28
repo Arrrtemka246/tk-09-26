@@ -1,33 +1,50 @@
-name: Refresh Team Kulik results
+name: Backup Team Kulik refresh
+
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'data/results.json'
   schedule:
     - cron: '7,27,47 * * * *'
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
-  group: team-kulik-refresh
+  group: team-kulik-backup
   cancel-in-progress: true
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
+      - name: Check whether live updater is active
+        id: live
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          COUNT="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/live-results.yml/runs?status=in_progress" --jq '.total_count' 2>/dev/null || echo 0)"
+          if [ "$COUNT" -gt 0 ]; then
+            echo "active=true" >> "$GITHUB_OUTPUT"
+            echo "Live updater is active; backup refresh is not needed."
+          else
+            echo "active=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.live.outputs.active != 'true'
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
+        if: steps.live.outputs.active != 'true'
         with:
           python-version: '3.12'
       - name: Install parser dependencies
+        if: steps.live.outputs.active != 'true'
         run: pip install requests==2.32.5 beautifulsoup4==4.14.2 pypdf==6.1.1
       - name: Read official meet PDFs
+        if: steps.live.outputs.active != 'true'
         run: python scripts/update_results.py
       - name: Save fresh results
+        if: steps.live.outputs.active != 'true'
         run: |
           if git diff --quiet -- data/results.json; then
             echo "No result changes"
@@ -37,4 +54,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/results.json
           git commit -m "Update Team Kulik results [skip ci]"
-          git push
+          git pull --rebase origin main
+          git push origin main
