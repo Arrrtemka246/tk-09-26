@@ -14,7 +14,7 @@
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points"
   },
-  "lastUpdated": "2026-09-28T07:28:09+00:00",
+  "lastUpdated": "2026-09-28T07:33:24+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -314,7 +314,7 @@
           "seed": "2:20.37",
           "result": "2:28.60",
           "status": "finished",
-          "place": 6,
+          "place": 7,
           "aqua": 451,
           "delta": 8.23,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_2.pdf",
@@ -580,7 +580,7 @@
           "seed": "8:36.51",
           "result": "9:07.89",
           "status": "finished",
-          "place": 3,
+          "place": 4,
           "aqua": 561,
           "delta": 31.38,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_10.pdf",
