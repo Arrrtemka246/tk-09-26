@@ -20,7 +20,7 @@ jobs:
           python - <<'PY'
           import io,re,requests
           from pypdf import PdfReader
-          targets=['ЗАХАРОВ','ПЕРЕВЕЗЕНЦЕВ','ЧУМИКОВ','ЗАСЛОНОВ']
+          targets=['ЗАХАРОВ','ПЕРЕВ','РОМАН','ЧУМИКОВ','ЗАСЛОНОВ']
           for n in [1,2,4,6,8,10]:
               u=f'https://funtiak.serv00.net/YM/ResultList_{n}.pdf'
               r=requests.get(u,timeout=30)
