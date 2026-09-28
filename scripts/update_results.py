@@ -135,7 +135,7 @@ def main():
                         v=choose_result(times,x.get("seed"))
                         if not v:continue
                         if x.get("result")!=v:x["result"]=v;changed=True
-                        if x.get("status")!="finished":x["status"]="finished";changed=True
+                        if x.get("status")!="finished":x["status"]="finished";changed=True\n                        x["note"]=None
                         s0,s1=sec(x.get("seed")),sec(v);de=round(s1-s0,2) if s0 is not None and s1 is not None else None
                         if x.get("delta")!=de:x["delta"]=de;changed=True
                         candidates=[int(n) for n in re.findall(r"(?<!\d)(\d{3,4})(?!\d)",row) if 100<=int(n)<=1100]
