@@ -1,0 +1,62 @@
+name: Live Team Kulik updater
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-results.yml'
+  schedule:
+    - cron: '7 4 * * *'
+    - cron: '17 10 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: team-kulik-live
+  cancel-in-progress: false
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 370
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: pip install requests==2.32.5 beautifulsoup4==4.14.2 pypdf==6.1.1
+      - name: Configure updater identity
+        run: |
+          git config user.name "team-kulik-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Refresh every five minutes during the meet
+        env:
+          TZ: Europe/Moscow
+        run: |
+          DAY="$(date +%F)"
+          if [[ "$DAY" < "2026-09-27" || "$DAY" > "2026-09-30" ]]; then
+            echo "Outside competition dates; nothing to do."
+            exit 0
+          fi
+
+          for n in $(seq 1 72); do
+            echo "Refresh $n/72 at $(date '+%F %T %Z')"
+            git pull --rebase origin main || true
+            python scripts/update_results.py
+
+            if ! git diff --quiet -- data/results.json; then
+              git add data/results.json
+              git commit -m "Update Team Kulik results [skip ci]"
+              git pull --rebase origin main
+              git push origin main
+            fi
+
+            if [ "$n" -lt 72 ]; then
+              sleep 300
+            fi
+          done
