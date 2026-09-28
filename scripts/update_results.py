@@ -46,12 +46,18 @@ def infer(lines,i,events):
                 for e in events:
                     if event_line(lines[j],e):return e
 def name_indices(lines,name):
-    p=name.split(); vv=[norm(name)]
+    p=norm(name).split()
+    surname=p[0] if p else ""
+    first=p[1] if len(p)>1 else ""
+    fp=first[:4]
+    vv=[norm(name)]
     if len(p)>1:vv.append(norm(" ".join(p[1:]+p[:1])))
     out=[]
     for i,x in enumerate(lines):
         s=norm(x+" "+(lines[i+1] if i+1<len(lines) else ""))
-        if any(v in s for v in vv):out.append(i)
+        exact=any(v in s for v in vv)
+        fuzzy=(surname in s and (not fp or fp in s))
+        if exact or fuzzy:out.append(i)
     return out
 def pdf_kind(url,label,text):
     s=norm(url+" "+label+" "+text[:1500])
