@@ -14,7 +14,7 @@
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points"
   },
-  "lastUpdated": "2026-09-28T12:54:29+00:00",
+  "lastUpdated": "2026-09-28T12:59:44+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -28,14 +28,14 @@
           "heat": 2,
           "lane": 5,
           "seed": "55.00",
-          "result": null,
-          "status": "not_listed",
+          "result": "57.01",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 539,
+          "delta": 2.01,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-30",
@@ -273,14 +273,14 @@
           "heat": 4,
           "lane": 3,
           "seed": "57.00",
-          "result": null,
-          "status": "not_listed",
+          "result": "57.48",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 526,
+          "delta": 0.48,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-30",
@@ -328,14 +328,14 @@
           "heat": 4,
           "lane": 7,
           "seed": "57.47",
-          "result": null,
-          "status": "not_listed",
+          "result": "56.95",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 540,
+          "delta": -0.52,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-29",
@@ -656,14 +656,14 @@
           "heat": 4,
           "lane": 5,
           "seed": "57.00",
-          "result": null,
-          "status": "not_listed",
+          "result": "56.31",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 559,
+          "delta": -0.69,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-29",
@@ -750,14 +750,14 @@
           "heat": 3,
           "lane": 7,
           "seed": "57.47",
-          "result": null,
-          "status": "not_listed",
+          "result": "57.89",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 514,
+          "delta": 0.42,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-30",
@@ -1071,14 +1071,14 @@
           "heat": 3,
           "lane": 3,
           "seed": "57.00",
-          "result": null,
-          "status": "not_listed",
+          "result": "55.63",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
+          "aqua": 580,
+          "delta": -1.37,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_12.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_12.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-29",
