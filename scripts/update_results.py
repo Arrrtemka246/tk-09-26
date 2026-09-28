@@ -97,6 +97,15 @@ def main():
     course=detect_course(docs)
     if course and data["meet"].get("course")!=course:data["meet"]["course"]=course;changed=True
     events=sorted({s["event"] for a in data["athletes"] for s in a["starts"]},key=len,reverse=True)
+    # Enrich every protocol with event/sex/date metadata. This lets us distinguish
+    # "result not published yet" from "official result exists, athlete is absent".
+    for d in docs:
+        head=" ".join(d["lines"][:45])
+        hn=norm(head)
+        d["event"]=next((e for line in d["lines"][:45] for e in events if event_line(line,e)),None)
+        d["sex"]="F" if any(w in hn for w in ("женщин","девочк")) else ("M" if any(w in hn for w in ("мужчин","мальчик")) else None)
+        dm=re.search(r"(?<!\\d)([0-3]?\\d)\\.([01]?\\d)\\.(2026)(?!\\d)",head)
+        d["date"]=f"{dm.group(3)}-{int(dm.group(2)):02d}-{int(dm.group(1)):02d}" if dm else None
     for a in data["athletes"]:
         for x in a["starts"]:
             for d in docs:
@@ -134,6 +143,16 @@ def main():
             if x.get("result") and x.get("aqua") is None:
                 ap=points(data["meet"].get("course"),a["sex"],x["event"],x["result"])
                 if ap is not None:x["aqua"]=ap;changed=True
+            # Never invent DSQ/DNS/DNF. If a final result protocol for the exact
+            # event/sex/date is already published but this athlete is absent,
+            # show a neutral explicit state instead of "waiting".
+            if not x.get("result") and str(x.get("status","")).upper() not in ("DSQ","DNS","DNF"):
+                finals=[d for d in docs if d.get("kind")=="result" and d.get("event")==x["event"] and d.get("sex")==a["sex"] and (not d.get("date") or d.get("date")==x["date"])]
+                if finals:
+                    if x.get("status")!="not_listed":x["status"]="not_listed";changed=True
+                    note="Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+                    if x.get("note")!=note:x["note"]=note;changed=True
+                    if x.get("resultSource")!=finals[0]["url"]:x["resultSource"]=finals[0]["url"];changed=True
     if data.pop("sourceWarning",None) is not None:changed=True
     if changed:
         data["lastUpdated"]=datetime.now(timezone.utc).isoformat(timespec="seconds")
