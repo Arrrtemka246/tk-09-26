@@ -1,0 +1,36 @@
+name: Debug official protocols
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/debug-protocols.yml'
+permissions:
+  contents: read
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests==2.32.5 pypdf==6.1.1
+      - name: Print target rows
+        run: |
+          python - <<'PY'
+          import io,re,requests
+          from pypdf import PdfReader
+          targets=['ЗАХАРОВ','ПЕРЕВЕЗЕНЦЕВ','ЧУМИКОВ','ЗАСЛОНОВ']
+          for n in [1,2,4,6,8,10]:
+              u=f'https://funtiak.serv00.net/YM/ResultList_{n}.pdf'
+              r=requests.get(u,timeout=30)
+              print('\n###',u,r.status_code,len(r.content))
+              if r.status_code!=200: continue
+              text='\n'.join((p.extract_text(extraction_mode='layout') or '') for p in PdfReader(io.BytesIO(r.content)).pages)
+              lines=text.splitlines()
+              for i,line in enumerate(lines):
+                  if any(t in line.upper().replace('Ё','Е') for t in targets):
+                      print('--- MATCH',i,'---')
+                      for x in lines[max(0,i-2):min(len(lines),i+3)]:
+                          print(repr(x))
+          PY
