@@ -141,7 +141,7 @@ def main():
                         candidates=[int(n) for n in re.findall(r"(?<!\d)(\d{3,4})(?!\d)",row) if 100<=int(n)<=1100]
                         ap=candidates[-1] if candidates else points(data["meet"].get("course"),a["sex"],x["event"],v)
                         if x.get("aqua")!=ap:x["aqua"]=ap;changed=True
-                        m=re.match(r"^\s*(\d{1,2})\b",row);pl=int(m.group(1)) if m and int(m.group(1))!=x["lane"] else None
+                        m=re.match(r"^\s*(\d{1,2})\.",row);pl=int(m.group(1)) if m else None
                         if pl and x.get("place")!=pl:x["place"]=pl;changed=True
                     if x.get("resultSource")!=d["url"]:x["resultSource"]=d["url"];changed=True
     for a in data["athletes"]:
