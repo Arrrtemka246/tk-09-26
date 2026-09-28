@@ -152,7 +152,9 @@
           "delta": 12.4,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_8.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_8.pdf",
-          "note": null
+          "note": null,
+          "pb": true,
+          "pbNote": "Подтверждено спортсменом: результат 4:32.40 — personal best."
         },
         {
           "date": "2026-09-28",
