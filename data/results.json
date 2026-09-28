@@ -1206,12 +1206,12 @@
           "seed": "27.00",
           "result": "27.24",
           "status": "finished",
-          "place": 3,
+          "place": 4,
           "aqua": 546,
           "delta": 0.24,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_6.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_6.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-28",
@@ -1227,7 +1227,7 @@
           "delta": 7.13,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_10.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_10.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         },
         {
           "date": "2026-09-29",
