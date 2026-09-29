@@ -16,7 +16,7 @@
     "latestOfficialResultNo": 20,
     "liveProbeAt": "2026-09-29T06:32:25+00:00"
   },
-  "lastUpdated": "2026-09-29T06:49:37+00:00",
+  "lastUpdated": "2026-09-29T07:00:41+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -1240,7 +1240,7 @@
           "seed": "18:30.00",
           "result": "16:59.97",
           "status": "finished",
-          "place": null,
+          "place": 1,
           "aqua": 622,
           "delta": -90.03,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_20.pdf",
