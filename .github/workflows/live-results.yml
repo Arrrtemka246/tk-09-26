@@ -6,21 +6,21 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/live-results.yml'
+      - 'scripts/live_probe.py'
   schedule:
-    - cron: '7 4 * * *'
-    - cron: '17 10 * * *'
+    - cron: '13 3,6,9,12,15,18 * * *'
 
 permissions:
   contents: write
 
 concurrency:
   group: team-kulik-live
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   live:
     runs-on: ubuntu-latest
-    timeout-minutes: 370
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "team-kulik-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Refresh every five minutes during the meet
+      - name: Adaptive live refresh
         env:
           TZ: Europe/Moscow
         run: |
@@ -44,10 +44,17 @@ jobs:
             exit 0
           fi
 
-          for n in $(seq 1 72); do
-            echo "Refresh $n/72 at $(date '+%F %T %Z')"
+          for n in $(seq 1 1600); do
+            echo "Probe $n at $(date '+%F %T %Z')"
             git pull --rebase origin main || true
-            python scripts/update_results.py
+
+            OUT="$(python scripts/live_probe.py 2>&1 || true)"
+            echo "$OUT"
+
+            # Full reconciliation roughly every 10 minutes as a safety net.
+            if (( n == 1 || n % 24 == 0 )); then
+              python scripts/update_results.py || true
+            fi
 
             if ! git diff --quiet -- data/results.json; then
               git add data/results.json
@@ -56,7 +63,7 @@ jobs:
               git push origin main
             fi
 
-            if [ "$n" -lt 72 ]; then
-              sleep 300
-            fi
+            SLEEP="$(printf '%s\n' "$OUT" | awk -F= '/^SLEEP=/{print $2}' | tail -1)"
+            if ! [[ "$SLEEP" =~ ^[0-9]+$ ]]; then SLEEP=30; fi
+            sleep "$SLEEP"
           done
