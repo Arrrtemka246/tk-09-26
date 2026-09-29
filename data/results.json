@@ -13,10 +13,10 @@
     "timezone": "Europe/Moscow",
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points",
-    "latestOfficialResultNo": 19,
-    "liveProbeAt": "2026-09-29T06:15:41+00:00"
+    "latestOfficialResultNo": 20,
+    "liveProbeAt": "2026-09-29T06:32:25+00:00"
   },
-  "lastUpdated": "2026-09-29T06:29:23+00:00",
+  "lastUpdated": "2026-09-29T06:32:25+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -253,13 +253,13 @@
           "lane": 2,
           "seed": "19:07.05",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_20.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_20.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -385,12 +385,12 @@
           "heat": 1,
           "lane": 4,
           "seed": "17:52.00",
-          "result": null,
-          "status": "scheduled",
+          "result": "16:16.68",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 708,
+          "delta": -95.32,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_20.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_20.pdf",
           "note": null
         }
@@ -1238,12 +1238,12 @@
           "heat": 1,
           "lane": 6,
           "seed": "18:30.00",
-          "result": null,
-          "status": "scheduled",
+          "result": "16:59.97",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 622,
+          "delta": -90.03,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_20.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_20.pdf",
           "note": null
         }
