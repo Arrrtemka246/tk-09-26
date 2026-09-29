@@ -181,7 +181,7 @@ def main():
         data["lastUpdated"]=datetime.now(timezone.utc).isoformat(timespec="seconds")
         DATA.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
-    remaining=[n for n,a,s in pending if not s.get("result") and str(s.get("status","")).upper() not in ("DSQ","DNS","DNF")]
+    remaining=[n for n,a,s in pending if not s.get("result") and str(s.get("status","")).upper() not in ("DSQ","DNS","DNF","NOT_LISTED")]
     next_no=min(remaining) if remaining else None
     if next_no is None:
         sleep=300
