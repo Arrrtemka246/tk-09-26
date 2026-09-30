@@ -13,10 +13,10 @@
     "timezone": "Europe/Moscow",
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points",
-    "latestOfficialResultNo": 26,
-    "liveProbeAt": "2026-09-30T12:31:34+00:00"
+    "latestOfficialResultNo": 27,
+    "liveProbeAt": "2026-09-30T12:32:02+00:00"
   },
-  "lastUpdated": "2026-09-30T12:31:34+00:00",
+  "lastUpdated": "2026-09-30T12:32:02+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
