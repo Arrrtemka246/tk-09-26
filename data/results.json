@@ -14,9 +14,9 @@
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points",
     "latestOfficialResultNo": 32,
-    "liveProbeAt": "2026-09-30T13:17:26+00:00"
+    "liveProbeAt": "2026-09-30T13:34:20+00:00"
   },
-  "lastUpdated": "2026-09-30T13:31:41+00:00",
+  "lastUpdated": "2026-09-30T13:34:20+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -917,12 +917,12 @@
           "heat": 1,
           "lane": 3,
           "seed": "2:18.00",
-          "result": null,
-          "status": "scheduled",
+          "result": "2:14.41",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 582,
+          "delta": -3.59,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_33.pdf",
           "note": null
         }
@@ -1144,12 +1144,12 @@
           "heat": 1,
           "lane": 4,
           "seed": "2:17.61",
-          "result": null,
-          "status": "scheduled",
+          "result": "2:10.44",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 636,
+          "delta": -7.17,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_33.pdf",
           "note": null
         }
@@ -1184,13 +1184,13 @@
           "lane": 3,
           "seed": "2:18.00",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_33.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
