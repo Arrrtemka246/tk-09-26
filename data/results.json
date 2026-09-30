@@ -16,7 +16,7 @@
     "latestOfficialResultNo": 33,
     "liveProbeAt": "2026-09-30T13:37:31+00:00"
   },
-  "lastUpdated": "2026-09-30T13:37:31+00:00",
+  "lastUpdated": "2026-09-30T13:39:27+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -919,7 +919,7 @@
           "seed": "2:18.00",
           "result": "2:14.41",
           "status": "finished",
-          "place": null,
+          "place": 1,
           "aqua": 582,
           "delta": -3.59,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
@@ -1146,7 +1146,7 @@
           "seed": "2:17.61",
           "result": "2:10.44",
           "status": "finished",
-          "place": null,
+          "place": 1,
           "aqua": 636,
           "delta": -7.17,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
@@ -1183,11 +1183,11 @@
           "heat": 2,
           "lane": 3,
           "seed": "2:18.00",
-          "result": "2:15.33",
+          "result": "2:21.41",
           "status": "finished",
-          "place": 2,
-          "aqua": 570,
-          "delta": -2.67,
+          "place": 3,
+          "aqua": 499,
+          "delta": 3.41,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_33.pdf",
           "note": null
