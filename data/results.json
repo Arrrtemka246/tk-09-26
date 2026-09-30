@@ -14,9 +14,9 @@
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points",
     "latestOfficialResultNo": 33,
-    "liveProbeAt": "2026-09-30T13:34:50+00:00"
+    "liveProbeAt": "2026-09-30T13:37:31+00:00"
   },
-  "lastUpdated": "2026-09-30T13:34:50+00:00",
+  "lastUpdated": "2026-09-30T13:37:31+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -1183,14 +1183,14 @@
           "heat": 2,
           "lane": 3,
           "seed": "2:18.00",
-          "result": null,
-          "status": "not_listed",
-          "place": null,
-          "aqua": null,
-          "delta": null,
+          "result": "2:15.33",
+          "status": "finished",
+          "place": 2,
+          "aqua": 570,
+          "delta": -2.67,
           "resultSource": "https://funtiak.serv00.net/YM/ResultList_33.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_33.pdf",
-          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
+          "note": null
         }
       ]
     },
