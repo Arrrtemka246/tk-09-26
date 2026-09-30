@@ -16,7 +16,7 @@
     "latestOfficialResultNo": 33,
     "liveProbeAt": "2026-09-30T13:37:31+00:00"
   },
-  "lastUpdated": "2026-09-30T13:39:27+00:00",
+  "lastUpdated": "2026-09-30T13:46:45+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -728,7 +728,7 @@
           "event": "200 м в/с",
           "heat": 1,
           "lane": 1,
-          "seed": "2:01.05",
+          "seed": "1:59.06",
           "result": null,
           "status": "scheduled",
           "place": null,
