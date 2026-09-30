@@ -13,10 +13,10 @@
     "timezone": "Europe/Moscow",
     "aquaTable": "World Aquatics 2026",
     "aquaSource": "https://www.worldaquatics.com/swimming/points",
-    "latestOfficialResultNo": 33,
-    "liveProbeAt": "2026-09-30T13:37:31+00:00"
+    "latestOfficialResultNo": 34,
+    "liveProbeAt": "2026-09-30T13:47:04+00:00"
   },
-  "lastUpdated": "2026-09-30T13:46:45+00:00",
+  "lastUpdated": "2026-09-30T13:47:04+00:00",
   "athletes": [
     {
       "id": "anisimov-vsevolod",
@@ -46,12 +46,12 @@
           "heat": 1,
           "lane": 7,
           "seed": "2:01.00",
-          "result": null,
-          "status": "scheduled",
+          "result": "2:03.19",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 567,
+          "delta": 2.19,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
           "note": null
         }
@@ -198,13 +198,13 @@
           "lane": 5,
           "seed": "2:09.00",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -363,13 +363,13 @@
           "lane": 2,
           "seed": "2:11.40",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -441,13 +441,13 @@
           "lane": 2,
           "seed": "2:00.70",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -486,12 +486,12 @@
           "heat": 1,
           "lane": 4,
           "seed": "1:59.28",
-          "result": null,
-          "status": "scheduled",
+          "result": "1:56.17",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 676,
+          "delta": -3.11,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
           "note": null
         }
@@ -542,13 +542,13 @@
           "lane": 4,
           "seed": "1:59.28",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -596,12 +596,12 @@
           "heat": 1,
           "lane": 8,
           "seed": "2:01.59",
-          "result": null,
-          "status": "scheduled",
+          "result": "2:02.99",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 570,
+          "delta": 1.4,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
           "note": null
         }
@@ -729,12 +729,12 @@
           "heat": 1,
           "lane": 1,
           "seed": "1:59.06",
-          "result": null,
-          "status": "scheduled",
+          "result": "2:01.06",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 598,
+          "delta": 2.0,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
           "note": null
         }
@@ -769,13 +769,13 @@
           "lane": 5,
           "seed": "1:59.70",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -895,13 +895,13 @@
           "lane": 8,
           "seed": "2:01.59",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
@@ -979,12 +979,12 @@
           "heat": 1,
           "lane": 5,
           "seed": "1:59.70",
-          "result": null,
-          "status": "scheduled",
+          "result": "1:56.17",
+          "status": "finished",
           "place": null,
-          "aqua": null,
-          "delta": null,
-          "resultSource": null,
+          "aqua": 676,
+          "delta": -3.53,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
           "note": null
         }
@@ -1106,13 +1106,13 @@
           "lane": 6,
           "seed": "2:11.09",
           "result": null,
-          "status": "scheduled",
+          "status": "not_listed",
           "place": null,
           "aqua": null,
           "delta": null,
-          "resultSource": null,
+          "resultSource": "https://funtiak.serv00.net/YM/ResultList_34.pdf",
           "startSource": "https://funtiak.serv00.net/YM/StartList_34.pdf",
-          "note": null
+          "note": "Итоговый протокол дистанции опубликован, но спортсмен в нём не найден."
         }
       ]
     },
